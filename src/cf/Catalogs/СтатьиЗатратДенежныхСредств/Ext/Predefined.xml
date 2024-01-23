@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.16">
+	<Item id="5accaa4c-6357-4ced-b49f-37be19741e64">
+		<Name>АрендаЖилья</Name>
+		<Code>000000003</Code>
+		<Description>Аренда жилья</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2b1e30c2-5981-4694-a772-c51008ac25f9">
+		<Name>ГСМ</Name>
+		<Code>000000002</Code>
+		<Description>ГСМ</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="100a96c6-8957-4c48-9665-c454f481f738">
+		<Name>Инвестиции</Name>
+		<Code>000000009</Code>
+		<Description>Инвестиции</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e6af2923-583b-483e-a922-1beb29e70423">
+		<Name>Медицина</Name>
+		<Code>000000004</Code>
+		<Description>Медицина</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bcc66447-00db-4517-9431-efbaa7f9003a">
+		<Name>Непредвиденные</Name>
+		<Code>000000013</Code>
+		<Description>Непредвиденные</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9f3ef025-c35a-44c6-b945-b2a835f6dc02">
+		<Name>Одежда</Name>
+		<Code>000000008</Code>
+		<Description>Одежда</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8ae3724b-a509-4b22-b86f-2ad0e77fd659">
+		<Name>Подарки</Name>
+		<Code>000000007</Code>
+		<Description>Подарки</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7aa05ea1-8167-4624-bd36-53bc3b032af6">
+		<Name>Продукты</Name>
+		<Code>000000001</Code>
+		<Description>Продукты</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a61aad1b-d601-47d5-a098-4e86b873d1a2">
+		<Name>Связь</Name>
+		<Code>000000010</Code>
+		<Description>Связь</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3e889282-ffee-414d-998a-de74c3feb8e1">
+		<Name>СМС</Name>
+		<Code>000000011</Code>
+		<Description>СМС</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="ad174dc8-71ac-40c6-8352-5b6cd9c69c6b">
+		<Name>Спорт</Name>
+		<Code>000000005</Code>
+		<Description>Спорт</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="cf1f2366-124e-4b8a-806a-0789e4bc5e92">
+		<Name>Транспорт</Name>
+		<Code>000000006</Code>
+		<Description>Транспорт</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="58eca25a-37ef-462d-a0e4-461b15d4c3c8">
+		<Name>УходЗаСобой</Name>
+		<Code>000000012</Code>
+		<Description>Уход за собой</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

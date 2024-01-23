@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Итого" id="7">
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИтогоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИтогоРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Месяц" id="32">
+			<DataPath>Объект.Месяц</DataPath>
+			<ContextMenu name="МесяцКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="МесяцРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<Table name="ПланРасходов" id="10">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПланРасходов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПланРасходовКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ПланРасходовКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ПланРасходовРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ПланРасходовСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ПланРасходов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланРасходовСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПланРасходовСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПланРасходовСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ПланРасходов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланРасходовСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПланРасходовСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПланРасходовУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ПланРасходов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПланРасходовУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПланРасходовУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПланРасходовНомерСтроки" id="23">
+					<DataPath>Объект.ПланРасходов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланРасходовНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПланРасходовНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ПланРасходовСтатьяЗатрат" id="26">
+					<DataPath>Объект.ПланРасходов.СтатьяЗатрат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПланРасходовСтатьяЗатратКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПланРасходовСтатьяЗатратРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ПланРасходовСумма" id="29">
+					<DataPath>Объект.ПланРасходов.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.ПланРасходов.TotalСумма</FooterDataPath>
+					<ContextMenu name="ПланРасходовСуммаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПланРасходовСуммаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.МесячныйБюджет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

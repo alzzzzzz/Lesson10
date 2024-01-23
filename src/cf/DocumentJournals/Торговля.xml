@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<DocumentJournal uuid="9b598d57-1e8c-4e3b-a572-37092b30a144">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.Торговля" category="Selection">
+				<xr:TypeId>df2efb1e-6e37-4db1-ac5d-5984d19ad304</xr:TypeId>
+				<xr:ValueId>d2566518-7c55-47a8-bf7e-376f071fad12</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.Торговля" category="List">
+				<xr:TypeId>78a16c70-c137-4155-ac7b-0ed64d1358c4</xr:TypeId>
+				<xr:ValueId>9ad66282-9e88-4f6c-a096-354b8a2e6edc</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.Торговля" category="Manager">
+				<xr:TypeId>ce958c9e-e083-4209-91ec-14109bc7a0d8</xr:TypeId>
+				<xr:ValueId>75751316-21ad-4e56-947b-1976ec45d759</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>Торговля</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Торговля</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.Торговля.Form.ФормаСписка</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Сделка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакрытиеСделки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Ошибка</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="df360dbe-0e12-4fb5-9787-a4a870139d61">
+				<Properties>
+					<Name>НаправлениеСделки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление сделки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Сделка.Attribute.НаправлениеСделки</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакрытиеСделки.Attribute.НаправлениеСделки</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="da02894b-cf16-474d-b002-44730ab67d1f">
+				<Properties>
+					<Name>Инструмент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструмент</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакрытиеСделки.Attribute.Инструмент</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Сделка.Attribute.Инструмент</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Ошибка.Attribute.Инструмент</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="49918e64-3aec-4d8d-b5d9-b98a31e1185f">
+				<Properties>
+					<Name>Основание</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.ЗакрытиеСделки.Attribute.Основание</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Сделка.Attribute.Основание</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.Ошибка.Attribute.Основание</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

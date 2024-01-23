@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПрикрепитьИзображение" id="27">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПрикрепитьИзображение</CommandName>
+				<ExtendedTooltip name="ФормаПрикрепитьИзображениеРасширеннаяПодсказка" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОбщаяГруппа" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОбщаяГруппаРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПараметров" id="40">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметров</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаПараметровРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<CheckBoxField name="ИдеяАктивна" id="29">
+							<DataPath>Объект.ИдеяАктивна</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИдеяАктивнаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ИдеяАктивнаРасширеннаяПодсказка" id="31"/>
+						</CheckBoxField>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Инструмент" id="10">
+							<DataPath>Объект.Инструмент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИнструментКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ИнструментРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="НаправлениеСделки" id="13">
+							<DataPath>Объект.НаправлениеСделки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаправлениеСделкиКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="НаправлениеСделкиРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Потенциал" id="16">
+							<DataPath>Объект.Потенциал</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПотенциалКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПотенциалРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПараметрыСигнала" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры сигнала</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры сигнала</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыСигналаРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Table name="ПараметрыСигнала" id="48">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПараметрыСигнала</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПараметрыСигналаКонтекстноеМеню" id="49"/>
+							<AutoCommandBar name="ПараметрыСигналаКоманднаяПанель" id="50"/>
+							<ExtendedTooltip name="ПараметрыСигналаРасширеннаяПодсказка" id="51"/>
+							<SearchStringAddition name="ПараметрыСигналаСтрокаПоиска" id="52">
+								<AdditionSource>
+									<Item>ПараметрыСигнала</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыСигналаСтрокаПоискаКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ПараметрыСигналаСтрокаПоискаРасширеннаяПодсказка" id="54"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПараметрыСигналаСостояниеПросмотра" id="55">
+								<AdditionSource>
+									<Item>ПараметрыСигнала</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыСигналаСостояниеПросмотраКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ПараметрыСигналаСостояниеПросмотраРасширеннаяПодсказка" id="57"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПараметрыСигналаУправлениеПоиском" id="58">
+								<AdditionSource>
+									<Item>ПараметрыСигнала</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыСигналаУправлениеПоискомКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="ПараметрыСигналаУправлениеПоискомРасширеннаяПодсказка" id="60"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПараметрыСигналаНомерСтроки" id="61">
+									<DataPath>Объект.ПараметрыСигнала.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыСигналаНомерСтрокиКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ПараметрыСигналаНомерСтрокиРасширеннаяПодсказка" id="63"/>
+								</LabelField>
+								<InputField name="ПараметрыСигналаПараметр" id="64">
+									<DataPath>Объект.ПараметрыСигнала.Параметр</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыСигналаПараметрКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ПараметрыСигналаПараметрРасширеннаяПодсказка" id="66"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИзображений" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изображений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изображений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИзображенийРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИдея" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа идея</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа идея</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИдеяРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<InputField name="ОписаниеИдеи" id="7">
+							<DataPath>Объект.ОписаниеИдеи</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОписаниеИдеиКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОписаниеИдеиРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ОтменаИдеи" id="35">
+							<DataPath>Объект.ОтменаИдеи</DataPath>
+							<ContextMenu name="ОтменаИдеиКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ОтменаИдеиРасширеннаяПодсказка" id="37"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОбзорПоИнструменту</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрикрепитьИзображение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить изображение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить изображение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрикрепитьИзображение</Action>
+		</Command>
+	</Commands>
+</Form>

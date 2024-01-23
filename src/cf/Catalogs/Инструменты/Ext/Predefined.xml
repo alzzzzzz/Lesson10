@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.16">
+	<Item id="ad7cd4ec-9591-4675-a017-d7fe68b46e99">
+		<Name>Акции</Name>
+		<Code>000000002</Code>
+		<Description>Акции</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="c0eec2f0-b76c-4610-a00b-5529738be654">
+		<Name>Вклады</Name>
+		<Code>000000005</Code>
+		<Description>Вклады</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="e88b8740-b409-497d-b03b-5aabc805c36c">
+		<Name>Облигации</Name>
+		<Code>000000003</Code>
+		<Description>Облигации</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="41b33bf7-acd1-4bc9-8b6c-359b2912d410">
+		<Name>Фьючерсы</Name>
+		<Code>000000001</Code>
+		<Description>Фьючерсы</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+</PredefinedData>

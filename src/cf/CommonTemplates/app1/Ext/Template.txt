@@ -1,0 +1,10 @@
+﻿// Themes begin
+am4core.useTheme(am4themes_animated);
+// am4core.useTheme(am4themes_dark);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.XYChart);
+//chart.paddingRight = 20;
+chart.padding(0, 15, 0, 15);
+chart.leftAxesContainer.layout = "vertical";
+

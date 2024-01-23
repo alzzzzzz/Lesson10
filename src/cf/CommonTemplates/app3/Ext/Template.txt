@@ -1,0 +1,101 @@
+﻿// Add simple bullet
+var bullet = lineSeries2.bullets.push(new am4core.Circle());
+bullet.tooltipText = "[bold black]{info}[/]";
+bullet.tooltipPosition = "pointer";
+bullet.radius = 6;
+bullet.stroke = am4core.color("#000");
+bullet.propertyFields.fill = "bulletColor";
+
+/**
+ * Set up external controls
+ */
+
+// Date format to be used in input fields
+var inputFieldFormat = "yyyy-MM-dd";
+
+document.getElementById("b1w").addEventListener("click", function() {
+  var max = dateAxis.groupMax["day1"];
+  var date = new Date(max);
+  am4core.time.add(date, "week", -1);
+  zoomToDates(date);
+});
+
+
+document.getElementById("b1m").addEventListener("click", function() {
+  var max = dateAxis.groupMax["day1"];
+  var date = new Date(max);
+  am4core.time.add(date, "month", -1);
+  zoomToDates(date);
+});
+
+document.getElementById("b3m").addEventListener("click", function() {
+  var max = dateAxis.groupMax["day1"];
+  var date = new Date(max);
+  am4core.time.add(date, "month", -3);
+  zoomToDates(date);
+});
+
+document.getElementById("b6m").addEventListener("click", function() {
+  var max = dateAxis.groupMax["day1"];
+  var date = new Date(max);
+  am4core.time.add(date, "month", -6);
+  zoomToDates(date);
+});
+
+document.getElementById("b1y").addEventListener("click", function() {
+  var max = dateAxis.groupMax["day1"];
+  var date = new Date(max);
+  am4core.time.add(date, "year", -1);
+  zoomToDates(date);
+});
+
+document.getElementById("bmax").addEventListener("click", function() {
+  var min = dateAxis.groupMin["day1"];
+  var date = new Date(min);
+  zoomToDates(date);
+});
+
+dateAxis.events.on("selectionextremeschanged", function() {
+  updateFields();
+});
+
+dateAxis.events.on("extremeschanged", updateFields);
+
+function updateFields() {
+  var minZoomed = dateAxis.minZoomed + am4core.time.getDuration(dateAxis.mainBaseInterval.timeUnit, dateAxis.mainBaseInterval.count) * 0.5;
+  document.getElementById("fromfield").value = chart.dateFormatter.format(minZoomed, inputFieldFormat);
+  document.getElementById("tofield").value = chart.dateFormatter.format(new Date(dateAxis.maxZoomed), inputFieldFormat);
+}
+
+document.getElementById("fromfield").addEventListener("keyup", updateZoom);
+document.getElementById("tofield").addEventListener("keyup", updateZoom);
+
+var zoomTimeout;
+function updateZoom() {
+  if (zoomTimeout) {
+    clearTimeout(zoomTimeout);
+  }
+  zoomTimeout = setTimeout(function() {
+    var start = document.getElementById("fromfield").value;
+    var end = document.getElementById("tofield").value;
+    if ((start.length < inputFieldFormat.length) || (end.length < inputFieldFormat.length)) {
+      return;
+    }
+    var startDate = chart.dateFormatter.parse(start, inputFieldFormat);
+    var endDate = chart.dateFormatter.parse(end, inputFieldFormat);
+
+    if (startDate && endDate) {
+      dateAxis.zoomToDates(startDate, endDate);
+    }
+  }, 500);
+}
+
+function zoomToDates(date) {
+  var min = dateAxis.groupMin["day1"];
+  var max = dateAxis.groupMax["day1"];
+  dateAxis.keepSelection = true;
+  //dateAxis.start = (date.getTime() - min)/(max - min);
+  //dateAxis.end = 1;
+
+  dateAxis.zoom({start:(date.getTime() - min)/(max - min), end:1});
+}

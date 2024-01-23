@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="41">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="Файл" id="1">
+					<DataPath>Объект.Файл</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ФайлКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ФайлРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">ФайлПриИзменении</Event>
+						<Event name="StartChoice">ФайлНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<Button name="Прочитать" id="43">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Прочитать</CommandName>
+					<ExtendedTooltip name="ПрочитатьРасширеннаяПодсказка" id="44"/>
+				</Button>
+				<Button name="СоздатьДокументыСделок" id="75">
+					<Type>UsualButton</Type>
+					<Enabled>false</Enabled>
+					<CommandName>Form.Command.СоздатьДокументыСделок</CommandName>
+					<ExtendedTooltip name="СоздатьДокументыСделокРасширеннаяПодсказка" id="76"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СерияТестирования" id="38">
+			<DataPath>Объект.СерияТестирования</DataPath>
+			<ContextMenu name="СерияТестированияКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="СерияТестированияРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<Table name="Сделки" id="4">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Сделки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СделкиКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="СделкиКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="СделкиРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="СделкиСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>Сделки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СделкиСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СделкиСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СделкиСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>Сделки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СделкиСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СделкиСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СделкиУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>Сделки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СделкиУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СделкиУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СделкиНомерСтроки" id="45">
+					<DataPath>Объект.Сделки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиНомерСтрокиКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="СделкиНомерСтрокиРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<InputField name="СделкиПериод" id="48">
+					<DataPath>Объект.Сделки.Период</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиПериодКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СделкиПериодРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="СделкиИнструмент" id="51">
+					<DataPath>Объект.Сделки.Инструмент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиИнструментКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="СделкиИнструментРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="СделкиТипСделки" id="54">
+					<DataPath>Объект.Сделки.ТипСделки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиТипСделкиКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СделкиТипСделкиРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<InputField name="СделкиНаправление" id="57">
+					<DataPath>Объект.Сделки.Направление</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиНаправлениеКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="СделкиНаправлениеРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="СделкиОбъем" id="60">
+					<DataPath>Объект.Сделки.Объем</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиОбъемКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="СделкиОбъемРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="СделкиЦена" id="63">
+					<DataPath>Объект.Сделки.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиЦенаКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="СделкиЦенаРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="СделкиЦенаСтоп" id="66">
+					<DataPath>Объект.Сделки.ЦенаСтоп</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиЦенаСтопКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="СделкиЦенаСтопРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="СделкиЦенаТейк" id="69">
+					<DataPath>Объект.Сделки.ЦенаТейк</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиЦенаТейкКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="СделкиЦенаТейкРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="СделкиИдентификатор" id="72">
+					<DataPath>Объект.Сделки.Идентификатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиИдентификаторКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="СделкиИдентификаторРасширеннаяПодсказка" id="74"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаСделокMT5</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Прочитать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Прочитать</Action>
+		</Command>
+		<Command name="СоздатьДокументыСделок" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы сделок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документы сделок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьДокументыСделок</Action>
+		</Command>
+	</Commands>
+</Form>

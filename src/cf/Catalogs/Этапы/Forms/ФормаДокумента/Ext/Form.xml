@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Спринт" id="7">
+			<DataPath>Объект.Спринт</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СпринтКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СпринтРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Цель" id="10">
+			<DataPath>Объект.Цель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЦельКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ЦельРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="ГруппаКлючевыхЗадач" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключевые задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ключевых задач</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаКлючевыхЗадачРасширеннаяПодсказка" id="14"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПоказателейУспеха" id="15" DisplayImportance="VeryHigh">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатели успеха</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа показателей успеха</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>PopUp</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПоказателейУспехаРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<Table name="ПоказателиУспеха" id="17">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ПоказателиУспеха</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПоказателиУспехаКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="ПоказателиУспехаКоманднаяПанель" id="19"/>
+					<ExtendedTooltip name="ПоказателиУспехаРасширеннаяПодсказка" id="20"/>
+					<SearchStringAddition name="ПоказателиУспехаСтрокаПоиска" id="21">
+						<AdditionSource>
+							<Item>ПоказателиУспеха</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоказателиУспехаСтрокаПоискаКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="ПоказателиУспехаСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПоказателиУспехаСостояниеПросмотра" id="24">
+						<AdditionSource>
+							<Item>ПоказателиУспеха</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоказателиУспехаСостояниеПросмотраКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="ПоказателиУспехаСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПоказателиУспехаУправлениеПоиском" id="27">
+						<AdditionSource>
+							<Item>ПоказателиУспеха</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПоказателиУспехаУправлениеПоискомКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="ПоказателиУспехаУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ПоказателиУспехаНомерСтроки" id="30">
+							<DataPath>Объект.ПоказателиУспеха.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказателиУспехаНомерСтрокиКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ПоказателиУспехаНомерСтрокиРасширеннаяПодсказка" id="32"/>
+						</LabelField>
+						<InputField name="ПоказателиУспехаПоказатель" id="33">
+							<DataPath>Объект.ПоказателиУспеха.Показатель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПоказателиУспехаПоказательКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ПоказателиУспехаПоказательРасширеннаяПодсказка" id="35"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Этапы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.Ref</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПрикрепитьИзображение" id="70">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПрикрепитьИзображение</CommandName>
+				<ExtendedTooltip name="ФормаПрикрепитьИзображениеРасширеннаяПодсказка" id="71"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаИзображений" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изображений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изображений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИзображенийРасширеннаяПодсказка" id="69"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="72">
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<LabelField name="Основание" id="19">
+							<DataPath>Объект.Основание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ОснованиеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ОснованиеРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+						<InputField name="Инструмент" id="13">
+							<DataPath>Объект.Инструмент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИнструментКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ИнструментРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="НаправлениеСделки" id="7">
+							<DataPath>Объект.НаправлениеСделки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаправлениеСделкиКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НаправлениеСделкиРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="СпособСовершенияСделки" id="22">
+							<DataPath>Объект.СпособСовершенияСделки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СпособСовершенияСделкиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СпособСовершенияСделкиРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="Счет" id="10">
+							<DataPath>Объект.Счет</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СчетКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Коментарий" id="16">
+			<DataPath>Объект.Коментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КоментарийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КоментарийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<Table name="Параметры" id="28">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Параметры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПараметрыКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ПараметрыКоманднаяПанель" id="30"/>
+			<ExtendedTooltip name="ПараметрыРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ПараметрыСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>Параметры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ПараметрыСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПараметрыСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>Параметры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ПараметрыСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПараметрыУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>Параметры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПараметрыУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ПараметрыУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ПараметрыПередНачаломДобавления</Event>
+				<Event name="OnStartEdit">ПараметрыПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПараметрыНомерСтроки" id="41">
+					<DataPath>Объект.Параметры.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыНомерСтрокиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПараметрыНомерСтрокиРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<InputField name="ПараметрыДата" id="44">
+					<DataPath>Объект.Параметры.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыДатаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПараметрыДатаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ПараметрыКоличество" id="47">
+					<DataPath>Объект.Параметры.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыКоличествоКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПараметрыКоличествоРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">ПараметрыКоличествоПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПараметрыЦена" id="50">
+					<DataPath>Объект.Параметры.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыЦенаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПараметрыЦенаРасширеннаяПодсказка" id="52"/>
+					<Events>
+						<Event name="OnChange">ПараметрыЦенаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПараметрыСумма" id="53">
+					<DataPath>Объект.Параметры.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыСуммаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПараметрыСуммаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ПараметрыКомиссияБрокера" id="56">
+					<DataPath>Объект.Параметры.КомиссияБрокера</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыКомиссияБрокераКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ПараметрыКомиссияБрокераРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ПараметрыКомиссияБиржи" id="59">
+					<DataPath>Объект.Параметры.КомиссияБиржи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыКомиссияБиржиКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ПараметрыКомиссияБиржиРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ПараметрыЦенаСтопПриказа" id="62">
+					<DataPath>Объект.Параметры.ЦенаСтопПриказа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыЦенаСтопПриказаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПараметрыЦенаСтопПриказаРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="ПараметрыНомерСделки" id="65">
+					<DataPath>Объект.Параметры.НомерСделки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПараметрыНомерСделкиКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ПараметрыНомерСделкиРасширеннаяПодсказка" id="67"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЗакрытиеСделки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрикрепитьИзображение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить изображение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить изображение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрикрепитьИзображение</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.ПрибылиУбытки.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>AccumulationRegister.ОткрытыеПозиции.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗагрузитьДанные" id="60">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПрочитатьДанные</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьДанныеРасширеннаяПодсказка" id="61"/>
+			</Button>
+			<Button name="ФормаЗагрузитьСделки" id="114">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗагрузитьСделки</CommandName>
+				<ExtendedTooltip name="ФормаЗагрузитьСделкиРасширеннаяПодсказка" id="115"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ПутьКФайлу" id="55">
+			<DataPath>Объект.ПутьКФайлу</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="57"/>
+			<Events>
+				<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="Сделки" id="62">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Сделки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СделкиКонтекстноеМеню" id="63"/>
+			<AutoCommandBar name="СделкиКоманднаяПанель" id="64"/>
+			<ExtendedTooltip name="СделкиРасширеннаяПодсказка" id="65"/>
+			<SearchStringAddition name="СделкиСтрокаПоиска" id="66">
+				<AdditionSource>
+					<Item>Сделки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СделкиСтрокаПоискаКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="СделкиСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СделкиСостояниеПросмотра" id="69">
+				<AdditionSource>
+					<Item>Сделки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СделкиСостояниеПросмотраКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="СделкиСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СделкиУправлениеПоиском" id="72">
+				<AdditionSource>
+					<Item>Сделки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СделкиУправлениеПоискомКонтекстноеМеню" id="73"/>
+				<ExtendedTooltip name="СделкиУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СделкиНомерСтроки" id="75">
+					<DataPath>Объект.Сделки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиНомерСтрокиКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="СделкиНомерСтрокиРасширеннаяПодсказка" id="77"/>
+				</LabelField>
+				<InputField name="СделкиСчет" id="108">
+					<DataPath>Объект.Сделки.Счет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиСчетКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="СделкиСчетРасширеннаяПодсказка" id="110"/>
+				</InputField>
+				<InputField name="СделкиКодКлиента" id="111">
+					<DataPath>Объект.Сделки.КодКлиента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиКодКлиентаКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="СделкиКодКлиентаРасширеннаяПодсказка" id="113"/>
+				</InputField>
+				<InputField name="СделкиИнструмент" id="105">
+					<DataPath>Объект.Сделки.Инструмент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиИнструментКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="СделкиИнструментРасширеннаяПодсказка" id="107"/>
+				</InputField>
+				<InputField name="СделкиДата" id="78">
+					<DataPath>Объект.Сделки.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиДатаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="СделкиДатаРасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="СделкиКоличество" id="81">
+					<DataPath>Объект.Сделки.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиКоличествоКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="СделкиКоличествоРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="СделкиЦена" id="84">
+					<DataPath>Объект.Сделки.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиЦенаКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="СделкиЦенаРасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="СделкиСумма" id="87">
+					<DataPath>Объект.Сделки.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиСуммаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="СделкиСуммаРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<InputField name="СделкиКомиссияБрокера" id="90">
+					<DataPath>Объект.Сделки.КомиссияБрокера</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиКомиссияБрокераКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="СделкиКомиссияБрокераРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="СделкиКомиссияБиржи" id="93">
+					<DataPath>Объект.Сделки.КомиссияБиржи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиКомиссияБиржиКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="СделкиКомиссияБиржиРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="СделкиНомерЗаявки" id="96">
+					<DataPath>Объект.Сделки.НомерЗаявки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиНомерЗаявкиКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="СделкиНомерЗаявкиРасширеннаяПодсказка" id="98"/>
+				</InputField>
+				<InputField name="СделкиНомерСделки" id="99">
+					<DataPath>Объект.Сделки.НомерСделки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиНомерСделкиКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="СделкиНомерСделкиРасширеннаяПодсказка" id="101"/>
+				</InputField>
+				<InputField name="СделкиТипСделки" id="102">
+					<DataPath>Объект.Сделки.НаправлениеСделки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СделкиТипСделкиКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="СделкиТипСделкиРасширеннаяПодсказка" id="104"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузчикСделокИзXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрочитатьДанные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьДанные</Action>
+		</Command>
+		<Command name="ЗагрузитьСделки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить сделки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить сделки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСделки</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,62 @@
+﻿
+var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+// dateAxis.renderer.grid.template.location = 0;
+dateAxis.renderer.grid.template.location = 0;
+dateAxis.renderer.ticks.template.length = 8;
+dateAxis.renderer.ticks.template.strokeOpacity = 0.1;
+dateAxis.renderer.grid.template.disabled = true;
+dateAxis.renderer.ticks.template.disabled = false;
+dateAxis.renderer.ticks.template.strokeOpacity = 0.2;
+dateAxis.renderer.minLabelPosition = 0.01;
+dateAxis.renderer.maxLabelPosition = 0.99;
+dateAxis.keepSelection = true;
+dateAxis.minHeight = 30;
+
+dateAxis.groupData = true;
+dateAxis.minZoomCount = 5;
+
+var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+// valueAxis.tooltip.disabled = true;
+valueAxis.tooltip.disabled = true;
+valueAxis.zIndex = 1;
+valueAxis.renderer.baseGrid.disabled = true;
+// height of axis
+valueAxis.height = am4core.percent(65);
+
+valueAxis.renderer.gridContainer.background.fill = am4core.color("#000000");
+valueAxis.renderer.gridContainer.background.fillOpacity = 0.05;
+valueAxis.renderer.inside = true;
+valueAxis.renderer.labels.template.verticalCenter = "bottom";
+valueAxis.renderer.labels.template.padding(2, 2, 2, 2);
+
+//valueAxis.renderer.maxLabelPosition = 0.95;
+valueAxis.renderer.fontSize = "0.8em"
+
+var series = chart.series.push(new am4charts.CandlestickSeries());
+series.dataFields.dateX = "date";
+series.dataFields.valueY = "close";
+series.dataFields.openValueY = "open";
+series.dataFields.lowValueY = "low";
+series.dataFields.highValueY = "high";
+series.simplifiedProcessing = true;
+series.tooltipText = "Open: [bold black]{openValueY.value}[/]\nLow: [bold black]{lowValueY.value}[/]\nHigh: [bold black]{highValueY.value}[/]\nClose: [bold black]{valueY.value}[/]";
+
+chart.cursor = new am4charts.XYCursor();
+
+// a separate series for scrollbar
+var lineSeries = chart.series.push(new am4charts.LineSeries());
+lineSeries.dataFields.dateX = "date";
+lineSeries.dataFields.valueY = "close";
+// need to set on default state, as initially series is "show"
+lineSeries.defaultState.properties.visible = false;
+
+// hide from legend too (in case there is one)
+lineSeries.hiddenInLegend = true;
+lineSeries.fillOpacity = 0.5;
+lineSeries.strokeOpacity = 0.5;
+
+var scrollbarX = new am4charts.XYChartScrollbar();
+scrollbarX.series.push(lineSeries);
+scrollbarX.marginBottom = 20;
+chart.scrollbarX = scrollbarX;
+scrollbarX.scrollbarChart.xAxes.getIndex(0).minHeight = undefined;

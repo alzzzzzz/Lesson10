@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AccumulationRegister uuid="aeb5603f-55e6-486e-ad40-22f17716ef33">
+		<InternalInfo>
+			<xr:GeneratedType name="AccumulationRegisterRecord.ДвижениеДенежныхСредств" category="Record">
+				<xr:TypeId>b35b9782-c69c-490a-b278-10198bdc881b</xr:TypeId>
+				<xr:ValueId>c2a92aed-80e5-4196-9f28-75063b6df366</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterManager.ДвижениеДенежныхСредств" category="Manager">
+				<xr:TypeId>941053ca-3dcd-43c7-bdeb-17a068fc00ca</xr:TypeId>
+				<xr:ValueId>ca0327f7-2157-4cc3-9942-e81ea2774dae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterSelection.ДвижениеДенежныхСредств" category="Selection">
+				<xr:TypeId>685af379-64fd-4f07-9caf-798b47093ad8</xr:TypeId>
+				<xr:ValueId>f9606b2f-6e0f-4b07-ac14-8771ca085f57</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterList.ДвижениеДенежныхСредств" category="List">
+				<xr:TypeId>43af7b25-54d7-44fc-a200-9212e0146869</xr:TypeId>
+				<xr:ValueId>82c46409-88cc-48ca-a864-843f625f14a4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordSet.ДвижениеДенежныхСредств" category="RecordSet">
+				<xr:TypeId>fde8efe8-7fc2-4dfa-b7cb-c7d03c8e77a7</xr:TypeId>
+				<xr:ValueId>df221987-c35f-44b0-bc64-4f36b9bf164c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="AccumulationRegisterRecordKey.ДвижениеДенежныхСредств" category="RecordKey">
+				<xr:TypeId>7af9c804-41e0-4941-9339-0fc9291de18f</xr:TypeId>
+				<xr:ValueId>422d89ff-534f-44a1-ac06-cbdbb2a53fd2</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ДвижениеДенежныхСредств</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движение денежных средств</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultListForm/>
+			<AuxiliaryListForm/>
+			<RegisterType>Turnovers</RegisterType>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<DataLockControlMode>Managed</DataLockControlMode>
+			<FullTextSearch>DontUse</FullTextSearch>
+			<EnableTotalsSplitting>true</EnableTotalsSplitting>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</AccumulationRegister>
+</MetaDataObject>
